@@ -8,16 +8,21 @@
 # so [1, 2, 2, 3] returns [1, 2, 3]. You may create a new list or
 # modify the passed in list.
 def remove_adjacent(nums):
-    # +++ Your code here +++ 
-    return    
+    nums2 = []
+    last = None
+    for item in nums:
+        if item != last:
+            nums2.append(item)
+        last = item
+    return nums2
 
 # E. Given two lists sorted in increasing order, create and return a merged
 # list of all the elements in sorted order. You may modify the passed in lists.
 # Ideally, the solution should work in "linear" time, making a single
 # pass of both lists.
 def linear_merge(list1, list2):
-    # +++ Your code here +++ 
-    return
+    list3 = list1 + list2
+    return sorted(list3)
 
 # Simple provided test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
